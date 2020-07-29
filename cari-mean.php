@@ -2,7 +2,10 @@
 
 function cari_mean($arr)
 {
+    $mean = count($arr);
+    $rata = array_sum($arr) / $mean;
 
+    echo " $rata" . "<br>";" $rata" . "<br>";
 }
 
 // TEST CASE
