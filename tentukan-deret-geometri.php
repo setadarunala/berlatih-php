@@ -1,7 +1,18 @@
 <?php
 function tentukan_deret_geometri($arr)
 {
+    $rasio = $arr[1] / $arr[0];
+    if (sizeof($arr) <= 1) {
+        return true;
+    }
 
+    for ($i = 1; $i < sizeof($arr); $i++) {
+        if (($arr[$i] / $arr[$i - 1]) != $rasio) {
+            return "false<br>";
+        }
+        # code...
+    }
+    return "true<br>";
 }
 //TEST CASES
 echo tentukan_deret_geometri([1, 3, 9, 27, 81]); // true
